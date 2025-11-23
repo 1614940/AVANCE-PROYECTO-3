@@ -40,14 +40,18 @@ jobs:
       - name: DATOS GENERALES
         run: |
           echo "carrera de ingeniería de sistemas"
-      #  TERCER STEP: VARIABLES DE ENTORNO SECRETAS
+      # TERCER STEP: VARIABLES DE ENTORNO SECRETAS
       - name: VARIABLES DE ENTORNO SECRETAS
         run: |
-          echo user: ${{env.user}}
-          echo password: ${{env.password}}
-
+          echo "user: ${{env.user}}"
+          echo "password: ${{env.password}}"
       # VARIABLE ABIERTA
       - name: VERSION DE MI PROYECTO
         run: |
           echo "Variable abierta: ${{vars.VALOR}}"
+
+      # CUARTO STEP: VARIABLES ABIERTAS
+      - name: VARIABLES ABIERTAS
+        run: |
+          echo "Variables abiertas: ${{vars.VALOR2}}"
           
