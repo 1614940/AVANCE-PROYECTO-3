@@ -22,7 +22,8 @@ jobs:
       NOMBRES: "JOHNNY RICHARD"    
       APELLIDOS: "QUISPE TICONA"  
       EDAD: "37"             
-      
+      user: ${{secrets.USER}}
+      password: ${{secrets.PASSWORD}}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -35,7 +36,12 @@ jobs:
           echo "Nombres: $NOMBRES"
           echo "Apellidos: $APELLIDOS"
           echo "Edad: $EDAD"
-      # PRIMER STEP: DATOS GENERALES
+      # SEGUNDO STEP: DATOS GENERALES
       - name: DATOS GENERALES
         run: |
           echo "carrera de ingeniería de sistemas"
+      #  TERCER STEP: VARIABLES DE ENTORNO SECRETAS
+      - name: VARIABLES DE ENTORNO SECRETAS
+        run: |
+          echo "Variables secretas user: ${{env.USER}}"
+          echo "Variables secretas password: ${{env.PASSWORD}}"
