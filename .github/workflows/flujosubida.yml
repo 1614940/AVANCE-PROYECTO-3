@@ -43,8 +43,9 @@ jobs:
       #  TERCER STEP: VARIABLES DE ENTORNO SECRETAS
       - name: VARIABLES DE ENTORNO SECRETAS
         run: |
-          echo "user: ${{env.USER}}"
-          echo "password: ${{env.PASSWORD}}"
+          echo user: ${{env.user}}
+          echo password: ${{env.password}}
+
       # VARIABLE ABIERTA
       - name: VERSION DE MI PROYECTO
         run: |
